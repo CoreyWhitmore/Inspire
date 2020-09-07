@@ -12,29 +12,33 @@
     <title>Inspire</title>
 </head>
 
-<body>
-    <main id="background" class="container-fluid">
-        <div id="app" class="row h-100">
-            <div class="col-6 offset-1">
-                <div class="row bg-dark text-light d-flex justify-content-center" id="weather"
+<body class="d-flex align-items-stretch">
+    <main id="background" class="container-fluid d-flex flex-align-stretch">
+        <div id="app" class="row w-100">
+            <div class="col-5 offset-1 d-flex flex-column justify-content-between align-items-center">
+                <div class="row bg-dark text-light d-flex justify-content-center px-5" id="weather"
                     onclick="app.weatherController.changeMetric()"></div>
                 <div class="row text-center text-light" id="clock"></div>
-                <div class="row bg-light text-center p-1" id="quote"></div>
+                <div class="row bg-light text-center p-1 mb-2" id="quote"></div>
             </div>
-            <div class="col-5 h-100 pl-4 bg-light">
-                <div class="row" id="todo-form">
-                    <form class="form-inline" onsubmit="app.todoController.addTodo(event)">
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="title" name="title" placeholder="Task Title">
-                        </div>
-                        <button type="submit" class="btn btn-primary form-control">New Task</button>
-                    </form>
-                </div>
-                <hr>
-                <div id="todo-count"></div>
-                <hr>
-                <div id="todo-list">
-                    Todos go here
+
+            <div class="col-5 offset-1 d-flex align-items-end">
+                <div class=" pl-4 bg-light py-2 mb-2 w-100">
+                    <div class="row" id="todo-form">
+                        <form class="form-inline" onsubmit="app.todoController.addTodo(event)">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="title" name="title"
+                                    placeholder="Task Title">
+                            </div>
+                            <button type="submit" class="btn btn-primary form-control">New Task</button>
+                        </form>
+                    </div>
+                    <hr>
+                    <div id="todo-count"></div>
+                    <hr>
+                    <div id="todo-list" class="pr-2">
+                        Todos go here
+                    </div>
                 </div>
             </div>
 

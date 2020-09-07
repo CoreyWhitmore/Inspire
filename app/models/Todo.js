@@ -7,7 +7,7 @@ export default class Todo {
 
 
   get Template() {
-    return `${this.CheckSymbol} ${this.description} <i class="fa fa-trash text-danger align-self-right" aria-hidden="true" onclick="app.todoController.removeTodo('${this.id}')"></i>`
+    return `<p>${this.CheckSymbol} ${this.description}</p> <i class="fa fa-trash text-danger align-self-right" aria-hidden="true" onclick="app.todoController.removeTodo('${this.id}')"></i>`
   }
 
   get CheckSymbol() {

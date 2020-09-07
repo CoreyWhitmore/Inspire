@@ -4,7 +4,8 @@ import { ProxyState } from "../AppState.js";
 class DateService {
     getDate() {
         let date = new Date()
-        ProxyState.time = date
+        let time = date.toLocaleTimeString()
+        ProxyState.time = time.toString()
     }
 
 }
